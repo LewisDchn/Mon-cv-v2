@@ -129,7 +129,8 @@ body a:hover {
       -ms-transform: rotate(360deg);
       transform: rotate(360deg);
     }
-  } 
+  }
+  /*--fin loader */ 
 body p, h1, h2, span, a {
     font-family: "Montserrat", sans-serif;
   }
@@ -539,9 +540,41 @@ time {
     visibility: visible;
     opacity: 1;
   }
+/* MEDIA QUERIES TIMELINES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+  }
+}
 
-
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #007bff;
+  }
+}
+/* ----------------------- */
+/* SKILLS */
+/* ----------------------- */
+#skills-anchor {
+  background-color: #eaeaea;
+  height: 680px;
+}
 
 
   /* --------------- */

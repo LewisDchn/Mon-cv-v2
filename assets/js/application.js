@@ -8,15 +8,15 @@ function showPage() {
   $("#loader").fadeOut(1000);
 }
 
-// --------------
-//Adding class to the current element in viewport - Purpose to launch effects
+// -------------- 
+//Ajout de classe à l'élément actuel dans la fenêtre d'affichage - Objectif de lancer des effets
 //---------------
 (function() {
   "use strict";
 
   var items = document.querySelectorAll(".timeline li");
 
-  // check if an element is in viewport
+  // vérifier si un élément est dans la fenêtre
   // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
   function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
@@ -93,7 +93,7 @@ function showPage() {
     }
   }
 
-  // give active class at the element which has the id given in param
+  // donner la classe active à l'élément qui a l'id donné dans param
   function rendre_actif(element) {
     if (document.querySelector(".onAncre")) {
       document.querySelector(".onAncre").className = "";
@@ -104,7 +104,7 @@ function showPage() {
     }
   }
 
-  // check if the top of the scren touch an anchor
+  // vérifier si le haut du scren touche une ancre
   function checkAncre() {
     var scroll = window.scrollY;
     if (scroll <= document.getElementById("home-ancre-menu").offsetTop) {
@@ -118,8 +118,12 @@ function showPage() {
     if (scroll >= document.getElementById("about-ancre-menu").offsetTop) {
       rendre_actif("timeline-anchor");
     }
-
+    
     if (scroll >= document.getElementById("about-timeline-menu").offsetTop) {
+      rendre_actif("skills-anchor");
+    }
+
+    if (scroll >= document.getElementById("about-skills-menu").offsetTop) {
       rendre_actif("projects-anchor");
     }
 
@@ -171,10 +175,10 @@ const header = document.getElementById("isFixed");
 function onWindowScroll(event) {
   if (window.pageYOffset < 46) {
     header.classList.remove("scrolled");
-    $("#logoImgHeader").attr("src", "img/logo-black.png");
+    $("#logoImgHeader").attr("src", "assets/img/logo-black.png");
   } else {
     header.classList.add("scrolled");
-    $("#logoImgHeader").attr("src", "img/logo-white.png");
+    $("#logoImgHeader").attr("src", "assets/img/logo-white.png");
   }
 }
 

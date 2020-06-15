@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" >
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no" />
     <title>Lewis Duchesne | Portfolio d'un développeur</title>
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -39,7 +39,7 @@
     <div id="container-page">
         <div class="block">
             <header class="header" id="isFixed">
-                <a href="#home-anchor"> <img id="logoImgHeader" src="img/logo-black.png" class="header-logo-home" alt=""></a>
+                <a href="#home-anchor"> <img id="logoImgHeader" src="assets/img/logo-black.png" class="header-logo-home" alt=""></a>
                 <button class="hamburger hamburger--collapse" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
@@ -49,10 +49,14 @@
                     <ul>
                         <li><a href="#about-anchor">A PROPOS</a></li>
                         <li><a href="#timeline-anchor">FORMATION</a></li>
+                        <li><a href="#skills-anchor">COMPÉTENCES</a></li>
                         <li><a href="#projects-anchor">PROJETS</a></li>
                         <li><a href="#hobbies-anchor">LOISIRS</a></li>
                     </ul>
                 </nav>
+            <!-- <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div> -->
             </header>
         </div>
         <!-- banner - bannière -->
@@ -67,29 +71,29 @@
                         <h1 class="title title2" >Développeur web</h1>
                     </div>  
                     <hr class="divider" id="home-ancre-menu">
-                    <h2 id="subtitle" ></h2>
+                    <h2 id="subtitle"></h2>
                 </div>
             </div>
         </div>
         <!-- About - a propos -->
-        <section id="about-anchor" >
-            <div class="about-content" >
+        <section id="about-anchor">
+            <div class="about-content">
                 <div class="title-about display-title">
                     <h1 id="title-section">Introduction</h1>
                 </div>
-                <div class="container-fluid ">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="about display-move" id="about-ancre-menu">
                             <div class="container-about">
                                 <div class="text-content">
-                                    <div class="text" >
+                                    <div class="text">
                                         <p>Sept années d’expérience en tant que technicien automobile, j’ai décidé de me réorienter professionnellement dans le 
                                             développement web, domaine pour lequel j’éprouve un grand intérêt et cela depuis des années.</p>
-                                        <p>Passionné d'informatique depuis toujours, C'est pour ces raisons que j'envisage de devenir 
-                                            developpeur web full stack</p>
+                                        <p>Passionné d'informatique depuis toujours, mon but est d'acquérir de nouvelles compétences et de poursuivre par la formation préparant au Titre Professionnel "Concepteur Développeur d’Applications" RNCP 31678 BAC+3/4 – Niveau 6 de la nomenclature européenne. Titre certifié par l’État et délivré par le Ministère du Travail.
+                                             C'est pour ces raisons que j'envisage de devenir developpeur web full stack</p>
                                     </div>
-                                    <div class="plus" >
-                                        <a target="_blank"  href="img/CV2019.pdf" class="btn cv">Télécharger mon CV</a>
+                                    <div class="plus">
+                                        <a target="_blank"  href="assets/img/CV LEWIS DUCHESNE.pdf" class="btn cv">Télécharger mon CV</a>
                                     </div>
                                 </div>
                             </div>
@@ -103,25 +107,96 @@
                 </div>
             </div>
         </section>
-        <!-- timeline - chronologie -->
-        <div class="title-timeline display-title" >
+        <!-- timeline - Formation / éxpérience -->
+        <div class="title-timeline display-title" id="timeline-anchor">
             <div class="title" id="title-section">
                 <h1  id="title-section">Formations - Expériences pro </h1>
             </div>
         </div>
-        <div class="block" id="timeline-anchor">
+        <div class="block" >
             <section class="timeline">
                 <div id="content-timeline">
                     <ul>
                         <li>
                             <div>
                                 <time>2016/2019 Saint Merry Auto</time>
+                                <p>Secteur Mécanique BMW/MINI</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2020 Formation Développeur Web et Web Mobile</time>
+                                <p>Développeur Web et web mobile : RNCP 31114 BAC+2, Niveau 5 de la nomenclature européenne</p>
+                                <p>Campus La manu de Noyon</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2014/2016 Courtoise Motors</time>
+                                <p>Secteur Mécanique AUDI/VOLSKWAGEN</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2010/2013 Obtention du Bacpro maintenance véhicules</time>
+                                <p>CFA de Nogent sur Oise</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2010/2013 Espace Saint Maximin</time>
+                                <p>Secteur Apprenti Mécanique AUDI/VOLSKWAGEN</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2008/2009 Seconde Pro en Mécanique Agricole</time>
+                                <p>CFA de Nanteuil le Haudouin</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2009/2010 LTH</time>
+                                <p>Secteur Apprenti Mécanique Agricole et Forestière</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2005/2008 Secondaire</time>
+                                <p>Instutution Saint Joseph du Moncel</p>
+                            </div>
+                        </li>
+                        <li id="about-timeline-menu">
+                            <div>
+                                <time>2008/2009 Europeene Automobile</time>
+                                <p>Secteur Apprenti Mécanique SUZUKI/MAZDA</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
         </div>
+        <!-- Mes Compétences -->
+        <section id="skills-anchor">
+            <div class="skills-content">
+                <div class="title-skills display-title">
+                    <div>
+                        <h1 class="title" id="title-section" >Mes Compétences</h1>
+                    </div>
+                </div>
+
+
+                <div class="title-timeline display-title" >
+                    <div class="title" id="title-section">
+                        <h1  id="title-section">Formations - Expériences pro </h1>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </section>
     
 
 </div>
@@ -148,6 +223,6 @@
         })
       </script>
 <!-- scripts -->
-<script src="js/particles.js"></script>
-<script src="js/app.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/app.js"></script>
 </html>

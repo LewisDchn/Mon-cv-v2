@@ -8,5 +8,5 @@ new TypeIt('#subtitle', {
   .delete(20)
   .options({speed: 50})
   .pause(500)
-  .type('dans mon univers.')
+  .type('dans mon Portfolio.')
   .go();
