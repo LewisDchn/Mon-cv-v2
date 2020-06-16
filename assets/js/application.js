@@ -104,7 +104,7 @@ function showPage() {
     }
   }
 
-  // vérifier si le haut du scren touche une ancre
+  // vérifier si le haut du screen touche une ancre
   function checkAncre() {
     var scroll = window.scrollY;
     if (scroll <= document.getElementById("home-ancre-menu").offsetTop) {

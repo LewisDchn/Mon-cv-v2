@@ -48,6 +48,9 @@ body a:hover {
     opacity: 0;
     transition: all 0.8s ease-in-out;
   }
+  body p, h1, h2, span, a {
+    font-family: "Montserrat", sans-serif;
+  }
   /* ----------------- */
   /* Loader */
   /* ----------------- */  
@@ -130,11 +133,9 @@ body a:hover {
       transform: rotate(360deg);
     }
   }
-  /*--fin loader */ 
-body p, h1, h2, span, a {
-    font-family: "Montserrat", sans-serif;
-  }
-    /* Add animation to "page content" */
+  /*--fin loader-- */ 
+
+  /* Add animation to "page content" */
 .animate-bottom {
     /* position: relative; */
     -webkit-animation-name: animatebottom;
@@ -376,7 +377,7 @@ hr.divider {
     margin-top: 60px;
     margin-bottom: 50px;
     border-bottom: solid #ff1100;
-    width: 30%;
+    width: 22%;
     color: #222222;
     padding-bottom: 15px;
   }
@@ -575,7 +576,32 @@ time {
   background-color: #eaeaea;
   height: 680px;
 }
-
+.title-skills {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+} 
+.title-skills .title {
+  text-align: center;
+  color: #222222;
+  margin-bottom: 50px;
+  border-bottom: solid #ff1100;
+  width: 30%;
+  padding-bottom: 15px;
+} 
+.logoSkills p {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 15px;
+    width: 210px;
+    background-color: #00000067;
+    display: inline-block;
+}
+.logoSkills h2 {
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
 
   /* --------------- */
 /* Only Desktop */
