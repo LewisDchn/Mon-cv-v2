@@ -25,7 +25,7 @@ function showPage() {
       rect.left >= 0 &&
       rect.bottom <=
         (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
 
@@ -49,6 +49,17 @@ function showPage() {
     }
   }
 
+  //Competence --- Skills
+  var skills = document.querySelectorAll(".display-skills");
+
+  function callbackFuncskills() {
+    for (var i = 0; i < skills.length; i++) {
+      if (isElementInViewport(skills[i])) {
+        skills[i].classList.add("in-view");
+      }
+    }
+  }
+
   //Projects
   var projects = document.querySelectorAll(".display-projects");
 
@@ -60,13 +71,13 @@ function showPage() {
     }
   }
 
-  //buttonsProjects
-  var buttons = document.querySelectorAll(".display-buttons");
+  //CarouselProjects
+  var Carousel = document.querySelectorAll(".display-carousel");
 
-  function callbackFuncButtons() {
-    for (var i = 0; i < buttons.length; i++) {
-      if (isElementInViewport(buttons[i])) {
-        buttons[i].classList.add("in-view");
+  function callbackFuncCarousel() {
+    for (var i = 0; i < Carousel.length; i++) {
+      if (isElementInViewport(Carousel[i])) {
+        Carousel[i].classList.add("in-view");
       }
     }
   }
@@ -107,32 +118,35 @@ function showPage() {
   // vérifier si le haut du screen touche une ancre
   function checkAncre() {
     var scroll = window.scrollY;
-    if (scroll <= document.getElementById("home-ancre-menu").offsetTop) {
+     // active la fleche back to top
+    if (scroll <= document.getElementById("home-ancre-menu").offsetTop) {  
       rendre_actif("home-ancre-menu");
       document.querySelector(".arrow-to-top").classList.remove("active");
     }
-    if (scroll >= document.getElementById("home-ancre-menu").offsetTop) {
+    // desactive la fleche back to top
+    if (scroll >= document.getElementById("home-ancre-menu").offsetTop) {   
       rendre_actif("about-anchor");
       document.querySelector(".arrow-to-top").classList.add("active");
     }
-    if (scroll >= document.getElementById("about-ancre-menu").offsetTop) {
+    // apparition de la timeline
+    if (scroll >= document.getElementById("about-ancre-menu").offsetTop) {  
       rendre_actif("timeline-anchor");
     }
-    
+    // apparition des compétences
     if (scroll >= document.getElementById("about-timeline-menu").offsetTop) {
       rendre_actif("skills-anchor");
     }
-
+    // apparition des projets 
     if (scroll >= document.getElementById("about-skills-menu").offsetTop) {
       rendre_actif("projects-anchor");
     }
-
+    // apparition des loisirs
     if (scroll >= document.getElementById("hobbies-ancre-menu").offsetTop) {
       rendre_actif("hobbies-anchor");
     }
   }
 
-  // listen for events
+  // listen des evenements 
   window.addEventListener("load", callbackFuncIcones);
   window.addEventListener("resize", callbackFuncIcones);
   window.addEventListener("scroll", callbackFuncIcones);
@@ -146,18 +160,22 @@ function showPage() {
   window.addEventListener("load", callbackFunc);
   window.addEventListener("resize", callbackFunc);
   window.addEventListener("scroll", callbackFunc);
-
+  //callback des skills
+  window.addEventListener("load", callbackFuncskills);
+  window.addEventListener("resize", callbackFuncskills);
+  window.addEventListener("scroll", callbackFuncskills);
+  // callback des projects
   window.addEventListener("load", callbackFuncProjects);
   window.addEventListener("resize", callbackFuncProjects);
   window.addEventListener("scroll", callbackFuncProjects);
-
+  
   window.addEventListener("load", callbackFuncIntro);
   window.addEventListener("resize", callbackFuncIntro);
   window.addEventListener("scroll", callbackFuncIntro);
 
-  window.addEventListener("load", callbackFuncButtons);
-  window.addEventListener("resize", callbackFuncButtons);
-  window.addEventListener("scroll", callbackFuncButtons);
+  window.addEventListener("load", callbackFuncCarousel);
+  window.addEventListener("resize", callbackFuncCarousel);
+  window.addEventListener("scroll", callbackFuncCarousel);
 
   window.addEventListener("load", callbackFuncTitle);
   window.addEventListener("resize", callbackFuncTitle);
@@ -196,72 +214,72 @@ function filterSelection(c) {
   }
 }
 
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
+// // Show filtered elements
+// function w3AddClass(element, name) {
+//   var i, arr1, arr2;
+//   arr1 = element.className.split(" ");
+//   arr2 = name.split(" ");
+//   for (i = 0; i < arr2.length; i++) {
+//     if (arr1.indexOf(arr2[i]) == -1) {
+//       element.className += " " + arr2[i];
+//     }
+//   }
+// }
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
+// // Hide elements that are not selected
+// function w3RemoveClass(element, name) {
+//   var i, arr1, arr2;
+//   arr1 = element.className.split(" ");
+//   arr2 = name.split(" ");
+//   for (i = 0; i < arr2.length; i++) {
+//     while (arr1.indexOf(arr2[i]) > -1) {
+//       arr1.splice(arr1.indexOf(arr2[i]), 1);
+//     }
+//   }
+//   element.className = arr1.join(" ");
+// }
 
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("group");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace("active", "");
+// // Add active class to the current control button (highlight it)
+// var btnContainer = document.getElementById("group");
+// var btns = btnContainer.getElementsByClassName("btn");
+// for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function() {
+//     var current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace("active", "");
 
-    this.className += " active";
-  });
-}
+//     this.className += " active";
+//   });
+// }
 
-//MODALE - ouvre la modale lors du clique sur l'image en question
-function openmodaleSymfony() {
-  $(".modale-symfony").addClass("opened");
-}
+// //MODALE - ouvre la modale lors du clique sur l'image en question
+// function openmodaleSymfony() {
+//   $(".modale-symfony").addClass("opened");
+// }
 
-function closemodaleSymfony() {
-  $(".modale-symfony").removeClass("opened");
-}
+// function closemodaleSymfony() {
+//   $(".modale-symfony").removeClass("opened");
+// }
 
-function openmodaleAngular() {
-  $(".modale-angular").addClass("opened");
-}
+// function openmodaleAngular() {
+//   $(".modale-angular").addClass("opened");
+// }
 
-function closemodaleAngular() {
-  $(".modale-angular").removeClass("opened");
-}
+// function closemodaleAngular() {
+//   $(".modale-angular").removeClass("opened");
+// }
 
-function openmodalePortfolio() {
-  $(".modale-portfolio").addClass("opened");
-}
+// function openmodalePortfolio() {
+//   $(".modale-portfolio").addClass("opened");
+// }
 
-function closemodalePortfolio() {
-  $(".modale-portfolio").removeClass("opened");
-}
+// function closemodalePortfolio() {
+//   $(".modale-portfolio").removeClass("opened");
+// }
 
-function openmodaleTma() {
-  $(".modale-tma").addClass("opened");
-}
+// function openmodaleTma() {
+//   $(".modale-tma").addClass("opened");
+// }
 
-function closemodaleTma() {
-  $(".modale-tma").removeClass("opened");
-}
+// function closemodaleTma() {
+//   $(".modale-tma").removeClass("opened");
+// }
