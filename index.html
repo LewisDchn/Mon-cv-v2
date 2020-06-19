@@ -4,15 +4,13 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no" />
     <title>Lewis Duchesne | Portfolio d'un développeur</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="hamburgers-master/dist/hamburgers.css" rel="stylesheet">
     <!-- CSS -->
     <!-- Font -->
     <link
-        href="https://fonts.googleapis.com/css?family=Crimson+Pro:600|Montserrat:400,700|Merriweather+Sans:400,700|Open+Sans&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css?family=Crimson+Pro:600|Montserrat:400,700|Merriweather+Sans:400,700|Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d55c1558f7.js" crossorigin="anonymous" SameSite="none Secure"></script>
     <!-- Font -->
 </head>
@@ -29,11 +27,11 @@
         </div>
     </div>
     <!-- Loading - chargement de page -->
-    <!-- <div id="loading">
+    <div id="loading">
         <div id="preloader">
             <div id="loader"></div>
         </div>
-    </div> -->
+    </div>
     <!-- Header - Menu -->
     <div id="container-page">
         <div class="block">
@@ -99,8 +97,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container-picture" >
-                                <div  class="picture" >
+                            <div class="container-picture">
+                                <div  class="picture">
                                     <img src="assets/img/photo.jpg" alt="Ma photo">
                                 </div>
                             </div>
@@ -215,7 +213,7 @@
                 </div>
                 <div class="row projects-container">
                     <!--Carousel Wrapper-->
-                    <div id="carousel-example-1z" class="col-lg-10 offset-1 carousel slide carousel-fade display-carousel" data-ride="carousel">
+                    <div id="carousel-example-1z" class="col-lg-8 offset-2 carousel slide carousel-fade display-carousel" data-ride="carousel">
                         <!--Indicators-->
                         <ol class="carousel-indicators">
                             <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
@@ -227,7 +225,7 @@
                         <div class="carousel-inner" role="listbox">
                             <!--First slide-->
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(141).jpg" alt="First slide">
+                                <img class="d-block w-100" src="assets/img/Web-Showcase-Project-Presentation.jpg" style="width: 1245px; height: 549px;" alt="First slide">
                             </div>
                             <!--/First slide-->
                             <!--Second slide-->
@@ -257,9 +255,6 @@
                 </div>
             </div>
         </section>
-        <div class="arrow-to-top">
-            <i onClick="window.scrollTo(x,y);" class="fas fa-arrow-up fa-3x"></i>
-        </div>
         <!-- Hobbies - loisirs-->
         <section id="hobbies-anchor">
             <div class="hobbies-content">
@@ -296,6 +291,9 @@
                 </div>
             </div>
         </section>
+        <div class="arrow-to-top">
+            <i onClick="window.scrollTo(0, 0);" class="fas fa-arrow-up fa-3x"></i>
+        </div>
         <footer>
             <div class="footer">
                 <div class="footer-icones">
@@ -303,7 +301,7 @@
                     <a target="_blank" href="https://github.com/LewisDchn"><img src="assets/img/github.png" alt="" height="50px"></a>
                     <a target="_blank" href="#"><img src="assets/img/inn.png" alt="" height="50px"></a>
                 </div>
-                <p class="rights display-buttons">© 2020. Tous droits réservés | Designé par <span id="name"> Lewis Duchesne </span> </p>
+                <p class="rights display-buttons">© 2020. Tous droits réservés | Designé par <span id="name">Lewis Duchesne</span></p>
             </div>
         </footer>
     </div>
@@ -313,11 +311,9 @@
 <script src="assets/js/typeIt.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script>
+<!-- <script>
     // Empeche le défilement du slider bootstrap
         $(function () {
           $('.carousel').carousel({ interval: false })
@@ -328,7 +324,7 @@
             $('.carousel').carousel('pause')
           })
         })
-      </script>
+      </script> -->
 <!-- scripts -->
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/app.js"></script>
