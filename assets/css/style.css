@@ -252,12 +252,6 @@ body a:hover {
     border-bottom: none !important;
   }
 .scrolled #logoImgHeader {
-    /* margin-left: 50px;
-    margin-top: 12px;
-    width: 65px;
-    height: 65px;
-    width: "100";
-    height: "100"; */
     float: left;
     margin-left: 40px;
     margin-top: 0px;
@@ -446,7 +440,7 @@ hr.divider {
     background: white;
     color: #444444;
     font-family: "Montserrat", sans-serif;
-    height: 1800px;
+    height: 1650px;
   }
 .title-timeline {
     display: flex;

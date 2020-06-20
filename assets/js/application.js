@@ -4,18 +4,16 @@
 setTimeout(showPage, 1700);
 
 function showPage() {
-  $("#loading").fadeOut(1500);
-  $("#loader").fadeOut(1000);
+  $('#loading').fadeOut(1500);
+  $('#loader').fadeOut(1000);
 }
 
 // -------------- 
 //Ajout de classe à l'élément actuel dans la fenêtre d'affichage - Objectif de lancer des effets
 //---------------
 (function() {
-  "use strict";
-
-  var items = document.querySelectorAll(".timeline li");
-
+  'use strict';
+  
   // vérifier si un élément est dans la fenêtre
   // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
   function isElementInViewport(el) {
@@ -27,175 +25,183 @@ function showPage() {
         (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-
-  function callbackFunc() {
+  var items = document.querySelectorAll('.timeline li');
+  
+  //timeline // formation
+  function callbackFuncTimeline() {
     for (var i = 0; i < items.length; i++) {
       if (isElementInViewport(items[i])) {
-        items[i].classList.add("in-view");
+        items[i].classList.add('in-view');
       }
     }
   }
 
   //Intro
   // define variables
-  var introHobbies = document.querySelectorAll(".display-move");
+  var introHobbies = document.querySelectorAll('.display-move');
 
   function callbackFuncIntro() {
     for (var i = 0; i < introHobbies.length; i++) {
       if (isElementInViewport(introHobbies[i])) {
-        introHobbies[i].classList.add("in-view");
+        introHobbies[i].classList.add('in-view');
+      }else{
+        introHobbies[i].classList.remove('in-view');
       }
     }
   }
 
   //Competence --- Skills
-  var skills = document.querySelectorAll(".display-skills");
+  var skills = document.querySelectorAll('.display-skills');
 
   function callbackFuncskills() {
     for (var i = 0; i < skills.length; i++) {
       if (isElementInViewport(skills[i])) {
-        skills[i].classList.add("in-view");
+        skills[i].classList.add('in-view');
+      }else{
+        skills[i].classList.remove('in-view');
       }
     }
   }
 
   //Projects
-  var projects = document.querySelectorAll(".display-projects");
+  var projects = document.querySelectorAll('.display-projects');
 
   function callbackFuncProjects() {
     for (var i = 0; i < projects.length; i++) {
       if (isElementInViewport(projects[i])) {
-        projects[i].classList.add("in-view");
+        projects[i].classList.add('in-view');
+      }else{
+        projects[i].classList.remove('in-view');
       }
     }
   }
 
   //CarouselProjects
-  var Carousel = document.querySelectorAll(".display-carousel");
+  var Carousel = document.querySelectorAll('.display-carousel');
 
   function callbackFuncCarousel() {
     for (var i = 0; i < Carousel.length; i++) {
       if (isElementInViewport(Carousel[i])) {
-        Carousel[i].classList.add("in-view");
+        Carousel[i].classList.add('in-view');
       }
     }
   }
 
-  //Title of each section
-  var title = document.querySelectorAll(".display-title");
+  // apparition titre des sections
+  var title = document.querySelectorAll('.display-title');
 
   function callbackFuncTitle() {
     for (var i = 0; i < title.length; i++) {
       if (isElementInViewport(title[i])) {
-        title[i].classList.add("in-view");
+        title[i].classList.add('in-view');
       }
     }
   }
 
   //Title of each section
-  var icones = document.querySelectorAll(".footer-icones");
+  var icones = document.querySelectorAll('.footer-icones');
 
   function callbackFuncIcones() {
     for (var i = 0; i < icones.length; i++) {
       if (isElementInViewport(icones[i])) {
-        icones[i].classList.add("in-view");
+        icones[i].classList.add('in-view');
+      }else{
+        icones[i].classList.remove('in-view');
       }
     }
   }
 
-  // donner la classe active à l'élément qui a l'id donné dans param
+  // donne la classe active à l'élément qui a l'id donné dans param
   function rendre_actif(element) {
-    if (document.querySelector(".onAncre")) {
-      document.querySelector(".onAncre").className = "";
+    if (document.querySelector('.onAncre')) {
+      document.querySelector('.onAncre').className = '';
     }
-    if (element != "home-ancre-menu") {
-      document.querySelector('a[href="#' + element + '"]').className = "onAncre";
+    if (element != 'home-ancre-menu') {
+      document.querySelector('a[href="#' + element + '"]').className = 'onAncre';
     }
   }
 
   // vérifier si le haut du screen touche une ancre
   function checkAncre() {
     var scroll = window.scrollY;
-     // active la fleche back to top
-    if (scroll <= document.getElementById("home-ancre-menu").offsetTop) {  
-      rendre_actif("home-ancre-menu");
-      document.querySelector(".arrow-to-top").classList.remove("active");
+     // desactive la fleche back to top
+    if (scroll <= document.getElementById('home-ancre-menu').offsetTop) {  
+      rendre_actif('home-ancre-menu');
+      document.querySelector('.arrow-to-top').classList.remove('active');
     }
-    // desactive la fleche back to top
-    if (scroll >= document.getElementById("home-ancre-menu").offsetTop) {   
-      rendre_actif("about-anchor");
-      document.querySelector(".arrow-to-top").classList.add("active");
+    // active la fleche back to top
+    if (scroll >= document.getElementById('home-ancre-menu').offsetTop) {   
+      rendre_actif('about-anchor');
+      document.querySelector('.arrow-to-top').classList.add('active');
     }
-    // apparition de la timeline
-    if (scroll >= document.getElementById("about-ancre-menu").offsetTop) {  
-      rendre_actif("timeline-anchor");
+    // apparition éxperience nav
+    if (scroll >= document.getElementById('about-ancre-menu').offsetTop) {  
+      rendre_actif('timeline-anchor')
     }
-    // apparition des compétences
-    if (scroll >= document.getElementById("about-timeline-menu").offsetTop) {
-      rendre_actif("skills-anchor");
+    // apparition compétences nav
+    if (scroll >= document.getElementById('about-timeline-menu').offsetTop) {
+      rendre_actif('skills-anchor')
     }
-    // apparition des projets 
-    if (scroll >= document.getElementById("about-skills-menu").offsetTop) {
-      rendre_actif("projects-anchor");
+    // apparition projets nav 
+    if (scroll >= document.getElementById('about-skills-menu').offsetTop) {
+      rendre_actif('projects-anchor')
     }
-    // apparition des loisirs
-    if (scroll >= document.getElementById("hobbies-ancre-menu").offsetTop) {
-      rendre_actif("hobbies-anchor");
+    // apparition loisirs nav
+    if (scroll >= document.getElementById('about-hobbies-menu').offsetTop) {
+      rendre_actif('hobbies-anchor');
     }
   }
 
   // listen des evenements 
-  window.addEventListener("load", callbackFuncIcones);
-  window.addEventListener("resize", callbackFuncIcones);
-  window.addEventListener("scroll", callbackFuncIcones);
-
+  window.addEventListener('load', callbackFuncIcones);
+  window.addEventListener('resize', callbackFuncIcones);
+  window.addEventListener('scroll', callbackFuncIcones);
   // listen for events
-  window.addEventListener("load", checkAncre);
-  window.addEventListener("resize", checkAncre);
-  window.addEventListener("scroll", checkAncre);
-
+  window.addEventListener('load', checkAncre);
+  window.addEventListener('resize', checkAncre);
+  window.addEventListener('scroll', checkAncre);
   // listen for events
-  window.addEventListener("load", callbackFunc);
-  window.addEventListener("resize", callbackFunc);
-  window.addEventListener("scroll", callbackFunc);
-  //callback des skills
-  window.addEventListener("load", callbackFuncskills);
-  window.addEventListener("resize", callbackFuncskills);
-  window.addEventListener("scroll", callbackFuncskills);
-  // callback des projects
-  window.addEventListener("load", callbackFuncProjects);
-  window.addEventListener("resize", callbackFuncProjects);
-  window.addEventListener("scroll", callbackFuncProjects);
+  window.addEventListener('load', callbackFuncTimeline);
+  window.addEventListener('resize', callbackFuncTimeline);
+  window.addEventListener('scroll', callbackFuncTimeline);
+  // event des skills
+  window.addEventListener('load', callbackFuncskills);
+  window.addEventListener('resize', callbackFuncskills);
+  window.addEventListener('scroll', callbackFuncskills);
+  // event des projects
+  window.addEventListener('load', callbackFuncProjects);
+  window.addEventListener('resize', callbackFuncProjects);
+  window.addEventListener('scroll', callbackFuncProjects);
   
-  window.addEventListener("load", callbackFuncIntro);
-  window.addEventListener("resize", callbackFuncIntro);
-  window.addEventListener("scroll", callbackFuncIntro);
+  window.addEventListener('load', callbackFuncIntro);
+  window.addEventListener('resize', callbackFuncIntro);
+  window.addEventListener('scroll', callbackFuncIntro);
 
-  window.addEventListener("load", callbackFuncCarousel);
-  window.addEventListener("resize", callbackFuncCarousel);
-  window.addEventListener("scroll", callbackFuncCarousel);
+  window.addEventListener('load', callbackFuncCarousel);
+  window.addEventListener('resize', callbackFuncCarousel);
+  window.addEventListener('scroll', callbackFuncCarousel);
 
-  window.addEventListener("load", callbackFuncTitle);
-  window.addEventListener("resize", callbackFuncTitle);
-  window.addEventListener("scroll", callbackFuncTitle);
+  window.addEventListener('load', callbackFuncTitle);
+  window.addEventListener('resize', callbackFuncTitle);
+  window.addEventListener('scroll', callbackFuncTitle);
 })();
 
 // ------------
-// MENU effects during the scroll
+// MENU effects pendant le scroll
 // ------------
 
-const header = document.getElementById("isFixed");
+const header = document.getElementById('isFixed');
 
 // J'en fait une fonction pour pouvoir l'appeler au chargement de la page car
 // le scoll n'est pas forcément en haut au chargement.
 function onWindowScroll(event) {
   if (window.pageYOffset < 46) {
-    header.classList.remove("scrolled");
-    $("#logoImgHeader").attr("src", "assets/img/logo-black.png");
+    header.classList.remove('scrolled');
+    $('#logoImgHeader').attr('src', 'assets/img/logo-black.png');
   } else {
-    header.classList.add("scrolled");
-    $("#logoImgHeader").attr("src", "assets/img/logo-white.png");
+    header.classList.add('scrolled');
+    $('#logoImgHeader').attr('src', 'assets/img/logo-white.png');
   }
 }
 
-window.addEventListener("scroll", onWindowScroll);
+window.addEventListener('scroll', onWindowScroll);
