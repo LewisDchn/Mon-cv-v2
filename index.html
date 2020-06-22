@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Lewis Duchesne | Portfolio d'un développeur</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="hamburgers-master/dist/hamburgers.css" rel="stylesheet">
-    <!-- CSS -->
-    <!-- Font -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Crimson+Pro:600|Montserrat:400,700|Merriweather+Sans:400,700|Open+Sans&display=swap" rel="stylesheet">
+    <!-- Fonts --> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Pro:600|Montserrat:400,700|Merriweather+Sans:400,700|Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d55c1558f7.js" crossorigin="anonymous" SameSite="none Secure"></script>
-    <!-- Font -->
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- CSS -->
 </head>
 <body>
     <!-- erreur message bientot dispo sur mobile -->
@@ -37,12 +41,7 @@
         <div class="block">
             <header class="header" id="isFixed">
                 <a href="#home-anchor"> <img id="logoImgHeader" src="assets/img/logo-black.png" class="header-logo-home" alt=""></a>
-                <!-- <button class="hamburger hamburger--collapse" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span> 
-                </button> -->
-                <nav class="header-menu-home" id="nav-ydefault">
+                <nav class="header-menu-home">
                     <ul>
                         <li><a href="#about-anchor">A PROPOS</a></li>
                         <li><a href="#timeline-anchor">FORMATION</a></li>
@@ -191,11 +190,11 @@
                                     <p><i class="fab fa-css3 fa-3x" aria-hidden="true"></i>CSS3</p>
                                     <p><i class="fab fa-js fa-3x" aria-hidden="true"></i>JAVASCRIPT</p>
                                     <p><i class="fab fa-php fa-3x" aria-hidden="true"></i>PHP7</p>
-                                    <p><i class="fas fa-database fa-3x" aria-hidden="true"></i>PHP7</p>
+                                    <p><i class="fas fa-database fa-3x" aria-hidden="true"></i>MYSQL</p>
                                     <p><i class="fab fa-wordpress fa-3x" aria-hidden="true"></i>WORDPRESS</p>
                                     <h2><i class="fas fa-laptop-code fa-2x"></i>FramWorks</h2>
-                                    <p ><i class="fab fa-bootstrap fa-3x"></i>BOOTSTRAP</p>
-                                </div>  <!-- id="about-skills-menu" -->  
+                                    <p><i class="fab fa-bootstrap fa-3x"></i>BOOTSTRAP</p>
+                                </div>  <!--  id="about-skills-menu"-->  
                             </div>
                         </div>    
                     </div>
@@ -222,18 +221,18 @@
                         <div class="carousel-inner" role="listbox">
                             <!--First slide-->
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="assets/img/Web-Showcase-Project-Presentation.jpg" style="width: 1245px; height: 549px;" alt="First slide">
-                            </div>
+                                <img class="d-block w-100" src="assets/img/mockuplepidor.png" style="width: 1000px; height: 600px;" alt="First slide">
+                            </div> 
                             <!--/First slide-->
                             <!--Second slide-->
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(136).jpg" alt="Second slide">
+                                <img class="d-block w-100" src="assets/img/mockup canard.png" style="width: 1000px; height: 600px;" alt="Second slide">
                             </div>
                             <!--/Second slide-->
                             <!--Third slide-->
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(137).jpg" alt="Third slide">
-                            </div>
+                            <!-- <div class="carousel-item">
+                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(137).jpg" style="width: 1000px; height: 600px;"alt="Third slide">
+                            </div> -->
                             <!--/Third slide-->
                         </div>
                         <!--/.Slides-->
@@ -296,33 +295,23 @@
                 <div class="footer-icones">
                     <a target="_blank" href="mailto:lewis.duchesne@outlook.fr"><img src="assets/img/mail.png" alt="" height="50px"></a>
                     <a target="_blank" href="https://github.com/LewisDchn"><img src="assets/img/github.png" alt="" height="50px"></a>
-                    <a target="_blank" href="#"><img src="assets/img/inn.png" alt="" height="50px"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/lewis-duchesne/"><img src="assets/img/inn.png" alt="" height="50px"></a>
                 </div>
-                <p class="rights display-buttons">© 2020. Tous droits réservés | Designé par <span id="name">Lewis Duchesne</span></p>
+                <p class="rights display-buttons">© 2020. Tous droits réservés | Designé par <span id="name">LEWIS</span></p>
             </div>
         </footer>
     </div>
 </body>
 <script src="assets/js/typeit.min.js"></script>
-<script src="assets/js/application.js" async></script>
+<script src="assets/js/application.js"></script>
 <script src="assets/js/typeIt.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- <script>
-    // Empeche le défilement du slider bootstrap
-        $(function () {
-          $('.carousel').carousel({ interval: false })
-          $('#cycle').click(function() {
-            $('.carousel').carousel('cycle')
-          })
-          $('#pause').click(function() {
-            $('.carousel').carousel('pause')
-          })
-        })
-    </script> -->
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/app.js"></script>
 </html>

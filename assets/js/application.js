@@ -25,13 +25,13 @@ function showPage() {
         (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-  var items = document.querySelectorAll('.timeline li');
+  var itemstime = document.querySelectorAll('.timeline li');
   
   //timeline // formation
   function callbackFuncTimeline() {
-    for (var i = 0; i < items.length; i++) {
-      if (isElementInViewport(items[i])) {
-        items[i].classList.add('in-view');
+    for (var i = 0; i < itemstime.length; i++) {
+      if (isElementInViewport(itemstime[i])) {
+        itemstime[i].classList.add('in-view');
       }
     }
   }
@@ -205,3 +205,14 @@ function onWindowScroll(event) {
 }
 
 window.addEventListener('scroll', onWindowScroll);
+
+var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    }

@@ -15,6 +15,15 @@ body a:hover {
     text-decoration: underline;
     text-decoration-color: #ff1100;
   }
+  /* bardenav hamb */
+  code {
+    display: inline-block;
+  }
+
+  code,
+  .hamburger {
+    vertical-align: middle;
+  }
 /* Back to the top of the page */
 .arrow-to-top.active {
     opacity: 0.5;
