@@ -44,8 +44,6 @@ function showPage() {
     for (var i = 0; i < introHobbies.length; i++) {
       if (isElementInViewport(introHobbies[i])) {
         introHobbies[i].classList.add('in-view');
-      }else{
-        introHobbies[i].classList.remove('in-view');
       }
     }
   }
@@ -57,8 +55,6 @@ function showPage() {
     for (var i = 0; i < skills.length; i++) {
       if (isElementInViewport(skills[i])) {
         skills[i].classList.add('in-view');
-      }else{
-        skills[i].classList.remove('in-view');
       }
     }
   }
@@ -70,8 +66,6 @@ function showPage() {
     for (var i = 0; i < projects.length; i++) {
       if (isElementInViewport(projects[i])) {
         projects[i].classList.add('in-view');
-      }else{
-        projects[i].classList.remove('in-view');
       }
     }
   }
@@ -160,6 +154,7 @@ function showPage() {
   window.addEventListener('load', checkAncre);
   window.addEventListener('resize', checkAncre);
   window.addEventListener('scroll', checkAncre);
+
   // listen for events
   window.addEventListener('load', callbackFuncTimeline);
   window.addEventListener('resize', callbackFuncTimeline);
@@ -206,13 +201,16 @@ function onWindowScroll(event) {
 
 window.addEventListener('scroll', onWindowScroll);
 
-var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+// var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))
+//                             for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);
+//                             else 
+//                             for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
 
-    var hamburgers = document.querySelectorAll(".hamburger");
-    if (hamburgers.length > 0) {
-      forEach(hamburgers, function(hamburger) {
-        hamburger.addEventListener("click", function() {
-          this.classList.toggle("is-active");
-        }, false);
-      });
-    }
+//     var hamburgers = document.querySelectorAll(".hamburger");
+//     if (hamburgers.length > 0) {
+//       forEach(hamburgers, function(hamburger) {
+//         hamburger.addEventListener("click", function() {
+//           this.classList.toggle("is-active");
+//         }, false);
+//       });
+//     }

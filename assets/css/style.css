@@ -604,7 +604,7 @@ time {
   color: #222222;
   margin-bottom: 50px;
   border-bottom: solid #ff1100;
-  width: 30%;
+  width: 25%;
   padding-bottom: 15px;
 } 
 .logoSkills p {
@@ -660,7 +660,7 @@ time {
   margin-top: 60px;
   margin-bottom: 50px;
   border-bottom: solid #ff1100;
-  width: 15%;
+  width: 12%;
   color: #222222;
   padding-bottom: 15px;
 }
@@ -687,7 +687,7 @@ time {
   padding-top: 50px;
   margin-bottom: 50px;
   border-bottom: solid #ff1100;
-  width: 15%;
+  width: 10%;
   color: #222222;
   padding-bottom: 15px;
 }
@@ -787,9 +787,12 @@ time {
     #about-anchor{
       height: 650px;
     }
+    .langages{
+      margin-left: 170px;
+    }
   }
   /* Tablette portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media (min-device-width: 630px) and (max-device-width: 1024px) {
   .error {
     display: none;
   }
@@ -927,12 +930,12 @@ time {
     height: 840px;
   }
   .display-skills.in-view {
-    padding-left: 15px;
+    padding-left: 80px;
   } 
-  .logoSkills {
-    padding-left: 35px;  
+  .frameworks{
+    margin-left: 95px;
   }
- 
+  
 /* ----------------------- */
 /* PROJECT */
 /* ----------------------- */
@@ -941,6 +944,11 @@ time {
   background-color: #ffffff;
   height: 820px;
   }
+.title-projects{
+
+ }
+
+
 }
 /* ----------------------- */
 /* HOBBIES */
