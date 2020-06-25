@@ -119,31 +119,31 @@ function showPage() {
   function checkAncre() {
     var scroll = window.scrollY;
      // desactive la fleche back to top
-    if (scroll <= document.getElementById('home-ancre-menu').offsetTop) {  
+     if (scroll <= document.getElementById('home-anchor').offsetTop || scroll > (document.getElementById('about-anchor').offsetTop - 200)) {
       rendre_actif('home-ancre-menu');
       document.querySelector('.arrow-to-top').classList.remove('active');
     }
     // active la fleche back to top
-    if (scroll >= document.getElementById('home-ancre-menu').offsetTop) {   
+    if (scroll >= (document.getElementById('about-anchor').offsetTop - 200)) {
       rendre_actif('about-anchor');
       document.querySelector('.arrow-to-top').classList.add('active');
     }
     // apparition éxperience nav
-    if (scroll >= document.getElementById('about-ancre-menu').offsetTop) {  
+    if (scroll >= (document.getElementById('timeline-anchor').offsetTop - 200)) {
       rendre_actif('timeline-anchor')
     }
     // apparition compétences nav
-    if (scroll >= document.getElementById('about-timeline-menu').offsetTop) {
+    if (scroll >= (document.getElementById('skills-anchor').offsetTop - 200)) {
       rendre_actif('skills-anchor')
     }
-    // apparition projets nav 
-    if (scroll >= document.getElementById('about-skills-menu').offsetTop) {
+    // apparition projets nav
+    if (scroll >= (document.getElementById('projects-anchor').offsetTop - 200)) {
       rendre_actif('projects-anchor')
     }
     // apparition loisirs nav
-    if (scroll >= document.getElementById('about-hobbies-menu').offsetTop) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
       rendre_actif('hobbies-anchor');
-    }
+   }
   }
 
   // listen des evenements 
@@ -154,7 +154,6 @@ function showPage() {
   window.addEventListener('load', checkAncre);
   window.addEventListener('resize', checkAncre);
   window.addEventListener('scroll', checkAncre);
-
   // listen for events
   window.addEventListener('load', callbackFuncTimeline);
   window.addEventListener('resize', callbackFuncTimeline);
