@@ -304,10 +304,12 @@ body a:hover {
 /* ----------------------- */
 hr.divider {
     background-color: #ff1100;
+    text-align: center;
     height: 5px;
-    width: 100px;
+    width: 20%;
+    margin-left: 40%;
+    opacity: 0.8;
   }
-  
 .home-anchor {
     height: 100vh;
   }
