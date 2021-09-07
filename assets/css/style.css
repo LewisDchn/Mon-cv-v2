@@ -449,7 +449,7 @@ hr.divider {
     background: white;
     color: #444444;
     font-family: "Montserrat", sans-serif;
-    height: 1650px;
+    height: auto;
   }
 .title-timeline {
     display: flex;
@@ -581,7 +581,7 @@ time {
 /* ----------------------- */
 #skills-anchor {
   background-color: #eaeaea;
-  height: 730px;
+  height: 700px;
 }
 .display-skills.in-view {
   transform: none;
@@ -604,7 +604,7 @@ time {
   color: #222222;
   margin-bottom: 50px;
   border-bottom: solid #ff1100;
-  width: 25%;
+  width: 15%;
   padding-bottom: 15px;
 } 
 .logoSkills p {
@@ -788,7 +788,11 @@ time {
       height: 650px;
     }
     .langages{
-      margin-left: 170px;
+      /* margin-left: 170px; */
+      text-align: center;
+    }
+    .frameworks{
+      text-align: center;
     }
   }
   /* Tablette portrait */
