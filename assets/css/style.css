@@ -2,46 +2,30 @@ html {
     scroll-behavior: smooth;
   }
 :root {
-  /* --app-container: #f3f6fd; */
-  --main-color: #eaeaea;
-  --secondary-color: #fff;
+  --main-color: #e4e4e4;
+  --secondary-color: whitesmoke;
   --text-color: #000;
   --link-color: #ff1100;
   --link-color-hover: #ff1100;
   --link-color-active: #fff;
-  --link-color-active-bg: #1f1c2e;
-  /* --projects-section: #fff; */
-  /* --message-box-hover: #fafcff; */
-  /* --message-box-border: #e9ebf0; */
-  /* --more-list-bg: #fff; */
-  /* --more-list-bg-hover: #f6fbff; */
-  /* --more-list-shadow: rgba(209, 209, 209, 0.4); */
-  /* --button-bg: #1f1c24; */
-  /* --search-area-bg: #fff; */
-  /* --star: #1ff1c2e; */
-  /* --message-btn: #fff; */
+  --bg-color-accordion-one: #eeeeee;
+  --bg-color-accordion-two: #e4e4e4;
+  --bg-color-accordion-three: #cfcfcf;
+  --color-bar-timeline: #555555;
 }
 
 .dark:root {
-  /* --app-container: #111827; */
-  --main-color: #1f2937;
+  --main-color: #585858;
   --secondary-color: #222222;
-  --text-color: rgba(255,255,255);
+  --text-color: whitesmoke;
   --projects-section: #1f2937;
-  --link-color: rgba(255,255,255);
+  --link-color: whitesmoke;
   --link-color-hover: rgba(195, 207, 244, 0.1);
   --link-color-active: #ff1100;
-  --link-color-active-bg: rgba(195, 207, 244, 0.2);
-  /* --button-bg: #1f2937; */
-  /* --search-area-bg: #1f2937; */
-  /* --message-box-hover: #243244; */
-  /* --message-box-border: rgba(255,255,255,.1); */
-  /* --star: #ffd92c; */
-  /* --light-font: rgba(255,255,255,.8); */
-  /* --more-list-bg: #2f3142; */
-  /* --more-list-bg-hover: rgba(195, 207, 244, 0.1); */
-  /* --more-list-shadow: rgba(195, 207, 244, 0.1); */
-  /* --message-btn: rgba(195, 207, 244, 0.1); */
+  --bg-color-accordion-one: rgb(98, 98, 98);
+  --bg-color-accordion-two: rgb(61, 61, 61);
+  --bg-color-accordion-three: rgb(47, 47, 47);
+  --color-bar-timeline: #c2000096;
 }
 body {
     margin: 0px;
@@ -360,6 +344,7 @@ body a:hover {
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
+  
 /* --------------------- */
 /* Banner */
 /* ----------------------- */
@@ -449,7 +434,7 @@ hr.divider {
     border-bottom: solid #ff1100;
     width: auto;
     color: var(--text-color);
-    padding-bottom: 15px;
+    padding-bottom: 2px;
   }
 .about-content .title-about h1 {
     font-size: 2.5em;
@@ -528,7 +513,7 @@ hr.divider {
     margin-bottom: 50px;
     border-bottom: solid #ff1100;
     width: auto;
-    padding-bottom: 15px;
+    padding-bottom: 2px;
   } 
 .timeline ul {
     padding: 30px 0;
@@ -540,7 +525,7 @@ hr.divider {
     width: 6px;
     margin: 0 auto;
     padding-top: 50px;
-    background: #555555;
+    background: var(--color-bar-timeline);
   }
 .timeline ul li::after {
     content: "";
@@ -672,7 +657,7 @@ time {
   margin-bottom: 50px;
   border-bottom: solid #ff1100;
   width: auto;
-  padding-bottom: 15px;
+  padding-bottom: 2px;
 } 
 .logoSkills p {
     margin-left: 30px;
@@ -731,7 +716,7 @@ time {
   border-bottom: solid #ff1100;
   width: auto;
   color: var(--text-color);
-  padding-bottom: 15px;
+  padding-bottom: 2px;
 }
 .projects-content {
   display: flex;
@@ -752,6 +737,18 @@ time {
 .accordion-body {
   text-align: center;
 }
+.accordion-one {
+  background-color: var(--bg-color-accordion-one) !important;
+  color: var(--text-color) !important;
+}
+.accordion-two {
+  background-color: var(--bg-color-accordion-two) !important;
+  color: var(--text-color) !important;
+}
+.accordion-three {
+  background-color: var(--bg-color-accordion-three) !important;
+  color: var(--text-color) !important;
+}
 /* ----------------------- */
 /* Hobbies */
 /* ----------------------- */
@@ -762,7 +759,7 @@ time {
   border-bottom: solid #ff1100;
   width: auto;
   color: var(--text-color);
-  padding-bottom: 15px;
+  padding-bottom: 2px;
 }
 .hobbies-content {
   background-color: var(--main-color);
