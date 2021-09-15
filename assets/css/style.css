@@ -1,6 +1,48 @@
 html {
     scroll-behavior: smooth;
   }
+:root {
+  /* --app-container: #f3f6fd; */
+  --main-color: #eaeaea;
+  --secondary-color: #fff;
+  --text-color: #000;
+  --link-color: #ff1100;
+  --link-color-hover: #ff1100;
+  --link-color-active: #fff;
+  --link-color-active-bg: #1f1c2e;
+  /* --projects-section: #fff; */
+  /* --message-box-hover: #fafcff; */
+  /* --message-box-border: #e9ebf0; */
+  /* --more-list-bg: #fff; */
+  /* --more-list-bg-hover: #f6fbff; */
+  /* --more-list-shadow: rgba(209, 209, 209, 0.4); */
+  /* --button-bg: #1f1c24; */
+  /* --search-area-bg: #fff; */
+  /* --star: #1ff1c2e; */
+  /* --message-btn: #fff; */
+}
+
+.dark:root {
+  /* --app-container: #111827; */
+  --main-color: #1f2937;
+  --secondary-color: #222222;
+  --text-color: rgba(255,255,255);
+  --projects-section: #1f2937;
+  --link-color: rgba(255,255,255);
+  --link-color-hover: rgba(195, 207, 244, 0.1);
+  --link-color-active: #ff1100;
+  --link-color-active-bg: rgba(195, 207, 244, 0.2);
+  /* --button-bg: #1f2937; */
+  /* --search-area-bg: #1f2937; */
+  /* --message-box-hover: #243244; */
+  /* --message-box-border: rgba(255,255,255,.1); */
+  /* --star: #ffd92c; */
+  /* --light-font: rgba(255,255,255,.8); */
+  /* --more-list-bg: #2f3142; */
+  /* --more-list-bg-hover: rgba(195, 207, 244, 0.1); */
+  /* --more-list-shadow: rgba(195, 207, 244, 0.1); */
+  /* --message-btn: rgba(195, 207, 244, 0.1); */
+}
 body {
     margin: 0px;
     margin: 0px;
@@ -174,6 +216,7 @@ body a:hover {
       opacity: 1;
     }
   }
+  
 /* ---------------------- */
 /* Menu-accueil */
 /* ---------------------- */
@@ -229,6 +272,15 @@ body a:hover {
 .header .header-menu-home .active {
     color: #ff1100;
   }
+.mode-switch {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: var(--main-color) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* ---------------------- */
 /* Menu une fois scroller */
 /* ---------------------- */
@@ -237,8 +289,17 @@ body a:hover {
     background-color: #222222;
     line-height: 65px;
     height: 65px;
-    color: white;
+    color: var(--text-color);
     animation: fadeInMenu 1.4s;
+  }
+  .scrolled .mode-switch {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: var(--link-color-active) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 .scrolled .onAncre {
     color: #ff1100 !important;
@@ -343,8 +404,8 @@ hr.divider {
     opacity: 0.9;
   }
 .banner .btn {
-    border: solid 1px white;
-    color: white;
+    border: solid 1px var(--text-color);
+    color: var(--text-color);
     font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
     padding-left: 30px;
@@ -356,7 +417,7 @@ hr.divider {
 .banner .btn:hover {
     background-color: #ff1100;
     border-color: #ff1100;
-    color: white;
+    color: var(--text-color);
   }
 /* ------------------ */
 /* About-Content */
@@ -373,7 +434,7 @@ hr.divider {
     transition: all 0.5s ease-in-out;
   }
 #about-anchor {
-    background-color: #eaeaea;
+    background-color: var(--main-color);
     height: 600px;
   }
 .about-content {
@@ -387,7 +448,7 @@ hr.divider {
     margin-bottom: 50px;
     border-bottom: solid #ff1100;
     width: auto;
-    color: #222222;
+    color: var(--text-color);
     padding-bottom: 15px;
   }
 .about-content .title-about h1 {
@@ -407,6 +468,7 @@ hr.divider {
 .about-content .container-about .text {
     font-size: 1.1em;
     width: 80%;
+    color: var(--text-color);
   }
 .about-content .container-about .plus {
     margin-top: 30px;
@@ -420,11 +482,12 @@ hr.divider {
     border: 2px solid rgb(210, 210, 210);
     text-align: center;
     display: block;
+    color: var(--text-color);
   }
 .about-content .container-about .cv:hover {
     border-color: #ff1100;
     background-color: #ff1100;
-    color: white;
+    color: var(--text-color);
   }
 .about-content .about {
     display: flex;
@@ -448,19 +511,20 @@ hr.divider {
     font-size: 0.9em;
   }
 .timeline {
-    background: white;
-    color: #444444;
+    background: var(--secondary-color);
+    color: var(--text-color);
     font-family: "Montserrat", sans-serif;
     height: auto;
   }
 .title-timeline {
+    background: var(--secondary-color);
     display: flex;
     justify-content: center;
     padding-top: 60px;
  } 
 .title-timeline .title {
     text-align: center;
-    color: #222222;
+    color: var(--text-color);
     margin-bottom: 50px;
     border-bottom: solid #ff1100;
     width: auto;
@@ -494,7 +558,7 @@ hr.divider {
     bottom: 0;
     width: 400px;
     padding: 15px;
-    background: white;
+    background: var(--secondary-color);
   }
 .timeline ul li div::before {
     content: "";
@@ -510,7 +574,7 @@ hr.divider {
 .timeline ul li:nth-child(odd) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent white;
+    border-color: transparent var(--secondary-color);
   }
 .timeline ul li:nth-child(even) div {
     left: -439px;
@@ -518,7 +582,7 @@ hr.divider {
 .timeline ul li:nth-child(even) div::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent white;
+    border-color: transparent transparent transparent var(--secondary-color);
   }
 time {
     display: block;
@@ -530,8 +594,8 @@ time {
 /* Effect timeline */
 /*–––––––––––––––––– */
 .timeline ul li.in-view::after {
-    background: white !important;
-    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+    background: var(--secondary-color) !important;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
     transition: inherit;
   }
 .timeline ul li div {
@@ -582,7 +646,7 @@ time {
 /* SKILLS */
 /* ----------------------- */
 #skills-anchor {
-  background-color: #eaeaea;
+  background-color: var(--main-color);
   height: auto;
 }
 .display-skills.in-view {
@@ -595,15 +659,16 @@ time {
   transform: translate3d(0, 40px, 0);
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  color: var(--text-color);
 }
 .title-skills {
   display: flex;
   justify-content: center;
-  padding-top: 60px;
+  padding-top: 60px;  
 } 
 .title-skills .title {
   text-align: center;
-  color: #222222;
+  color: var(--text-color);
   margin-bottom: 50px;
   border-bottom: solid #ff1100;
   width: auto;
@@ -615,7 +680,8 @@ time {
     text-align: center;
     padding: 15px;
     width: 215px;
-    background-color: #00000067;
+    color: var(--text-color);
+    background-color: #0000005d;
     display: inline-block;
     justify-content: center;
     border-radius: 15px;
@@ -631,7 +697,7 @@ time {
 /* PROJECT */
 /* ----------------------- */
 #projects-anchor {
-  background-color: #ffffff;
+  background-color: var(--secondary-color);
   height: auto;
 }
 .display-projects.in-view {
@@ -664,7 +730,7 @@ time {
   margin-bottom: 50px;
   border-bottom: solid #ff1100;
   width: auto;
-  color: #222222;
+  color: var(--text-color);
   padding-bottom: 15px;
 }
 .projects-content {
@@ -695,11 +761,11 @@ time {
   margin-bottom: 50px;
   border-bottom: solid #ff1100;
   width: auto;
-  color: #222222;
+  color: var(--text-color);
   padding-bottom: 15px;
 }
 .hobbies-content {
-  background-color: #eaeaea;
+  background-color: var(--main-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -727,7 +793,7 @@ time {
 }
 .hobbies-content .hobbies-container .hobbies .hobbies-content .image {
   border-radius: 50%;
-  background-color: #222222;
+  background-color: var(--text-color);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -735,11 +801,11 @@ time {
   box-shadow: 3px 3px 6px 1px rgba(6, 6, 6, 0.3);
 }
 .hobbies-content .hobbies-container .hobbies .hobbies-content .image .icone {
-  color: white;
+  color: var(--secondary-color);
 }
 .hobbies-content .hobbies-container .hobbies .hobbies-content span {
   padding-top: 30px;
-  color: #222222;
+  color: var(--text-color);
 }
 
 /* ------------ */
@@ -749,7 +815,7 @@ time {
 .footer {
   height: 150px;
   background-color: #222222;
-  color: white;
+  color: var(--secondary-color);
   text-align: center;
 }
 
@@ -768,6 +834,7 @@ time {
 
 .footer .rights {
   padding-top: 30px;
+  color: white;
 }
 
 .footer #name {
@@ -842,7 +909,7 @@ time {
   }
 
   #about-anchor {
-    background-color: #eaeaea;
+    background-color: var(--main-color);
     height: 630px;
   }
 
@@ -937,7 +1004,7 @@ time {
   /* skills --- competences */
 
   #skills-anchor {   
-    background-color: #eaeaea;
+    background-color: var(--main-color);
     height: 840px;
   }
   .display-skills.in-view {
@@ -952,7 +1019,7 @@ time {
 /* ----------------------- */
 
 #projects-anchor {
-  background-color: #ffffff;
+  background: var(--secondary-color);
   height: 820px;
   }
 .title-projects{

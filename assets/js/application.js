@@ -25,6 +25,15 @@ function showPage() {
         (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
+
+  var modeSwitch = document.querySelector('.mode-switch');
+  
+  modeSwitch.addEventListener('click', function () {                    
+      document.documentElement.classList.toggle('dark');
+      modeSwitch.classList.toggle('active');
+  });
+
+
   var itemstime = document.querySelectorAll('.timeline li');
   
   //timeline // formation
