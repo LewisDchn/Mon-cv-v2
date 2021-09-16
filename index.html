@@ -24,7 +24,7 @@
 
 <body>
     <!-- erreur message bientot dispo sur mobile -->
-    <div class="error">
+    <!-- <div class="error">
         <div class="message">
             <p>Bienvenue cher visiteur, mon créateur est en train de m'adapter sur téléphone.
                 Vous pouvez cependant venir me voir sur votre ordinateur ou sur votre tablette.</p>
@@ -33,7 +33,7 @@
                 <i class="fas fa-wrench fa-5x"></i>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Loading - chargement de page -->
     <!-- <div id="loading">
         <div id="preloader">
@@ -47,20 +47,26 @@
                 <a href="#home-anchor"> <img id="logoImgHeader" src="assets/img/logo-black.png" class="header-logo-home"
                         alt="">
                 </a>
-                <nav class="header-menu-home">
-                    <ul>
-                        <button class="mode-switch me-4" title="Switch Theme">
-                            <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
-                              <defs></defs>
-                              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                            </svg>
-                        </button>
-                        <li><a href="#about-anchor">A PROPOS</a></li>
-                        <li><a href="#timeline-anchor">FORMATION</a></li>
-                        <li><a href="#skills-anchor">COMPÉTENCES</a></li>
-                        <li><a href="#projects-anchor">PROJETS</a></li>
-                        <li><a href="#hobbies-anchor">LOISIRS</a></li>
-                    </ul>
+                <nav class="navbar navbar-expand-md header-menu-home">
+                    <!-- Collapse button -->
+                <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#maBarDeNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon1"><span></span><span></span><span></span></div>
+                </button>
+                    <div class="collapse navbar-collapse" id="maBarDeNav">
+                        <ul class="navbar-nav d-flex">
+                            <button class="mode-switch me-4" title="Switch Theme">
+                                <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+                                <defs></defs>
+                                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                                </svg>
+                            </button>
+                            <li class="nav-item"><a class="nav-link" href="#about-anchor">A PROPOS</a></li>
+                            <li class="nav-item"><a href="#timeline-anchor">FORMATION</a></li>
+                            <li class="nav-item"><a href="#skills-anchor">COMPÉTENCES</a></li>
+                            <li class="nav-item"><a href="#projects-anchor">PROJETS</a></li>
+                            <li class="nav-item"><a href="#hobbies-anchor">LOISIRS</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
         </div>

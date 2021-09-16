@@ -25,6 +25,21 @@ function showPage() {
         (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
+
+  // $(function () {
+  //   $('.material-tooltip-main').tooltip({
+  //     template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-inner"></div></div>'
+  //   });
+  // })
+  // boutton bardenav collapse
+  $(document).ready(function () {
+
+    $('.first-button').on('click', function () {
+  
+      $('.animated-icon1').toggleClass('open');
+    });
+  });
+
 // Mode sombre 
   var modeSwitch = document.querySelector('.mode-switch');
   
