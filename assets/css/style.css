@@ -208,12 +208,16 @@ body a:hover {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    line-height: 80px;
+    line-height: 60px;
     height: 110px;
     background-color: rgba(0, 0, 0, 0);
     position: fixed;
     z-index: 999;
   }
+/* .header:not(.collapse) {
+  background-color: rgba(0, 0, 0, 0.74) !important;
+  animation: fadeInMenu 1.4s; 
+}*/
 .onAncre {
     color: #ff1100 !important;
   }
@@ -246,6 +250,16 @@ body a:hover {
     float: right;
     font-size: 1em;
     margin-right: 30px;
+    text-align: end;
+  } 
+  @media screen and (max-width: 600px) {
+    .header .header-menu-home {
+      margin-right: 0px;
+    }
+  }
+
+  .first-button:not(.collapsed) {
+    text-align: end;
   }
 .header .header-menu-home a:not(:last-child) {
     margin-right: 25px;
@@ -270,12 +284,17 @@ body a:hover {
 /* ---------------------- */
 
 .scrolled {
-    background-color: #222222;
-    line-height: 65px;
-    height: 65px;
-    color: var(--text-color);
-    animation: fadeInMenu 1.4s;
+  background-color: rgba(0, 0, 0, 0.74) !important;
+  /* line-height: 65px; */
+  height: 65px;
+  color: var(--text-color);
+  animation: fadeInMenu 1.4s;
+}
+/* @media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: rgba(0, 0, 0, 0.74) !important;
   }
+} */
   .scrolled .mode-switch {
     background-color: transparent;
     border: none;
@@ -404,8 +423,8 @@ hr.divider {
     border-color: #ff1100;
     color: var(--text-color);
   }
-/* 
-  @media (max-width: 1023px) {
+
+@media screen and (max-width: 600px) {
     .banner .banner-content {
       color: white;
       position: absolute;
@@ -416,10 +435,19 @@ hr.divider {
     text-align: center;
       font-family: "Montserrat", sans-serif;
       font-weight: bold;
-      font-size: 3.3em;
+      font-size: 1.5em;
       opacity: 0.9;
     }
-  } */
+    .tiret {
+      display: none;
+    }
+    .pipe {
+      display: none;
+    }
+    #subtitle {
+      font-size: 0.9rem;
+    }
+  }
 /* ------------------ */
 /* About-Content */
 /* ------------------ */ 
@@ -640,7 +668,7 @@ time {
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #007bff;
+    border-color: transparent;
   }
 }
 /* ----------------------- */
@@ -1035,9 +1063,9 @@ time {
   background: var(--secondary-color);
   height: 820px;
   }
-.title-projects{
+/* .title-projects{
 
- }
+ } */
 
 
 }
